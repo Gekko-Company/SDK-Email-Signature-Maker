@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SDK Signature maker</title>
+</head>
+<body>
+
+    <div>
+        <input id="name" value="Sven Deketelaere" />
+        <input id="position" value="bestuurder" />
+        <button id="boom">Update</button>
+    </div>
+
+    <hr />
+    <div id="outer-card" style="border:1px solid black;padding:50px">
+        <div style="font-family:Verdana;color:#424847;font-size:8px;font-weight:100">
+
+            <table style="border-spacing:0; border-collapse:collapse;" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td style="font-size:10px;">
+                            <div style="font-weight:900" id="name-holder">
+                                Sven Deketelaere
+                            </div>
+                            <div id="position-holder">
+                                bestuurder
+                            </div>
+
+                            <img src="https://raw.githubusercontent.com/Gekko-Company/SDK-Email-Signature-Maker/master/assets/line.png" style="width:200px" />
+
+                            <p>
+                                FDK BV
+                            </p>
+                            <p>
+                                <div>
+                                    Monnikenwerve 53
+                                </div>
+                                <div>
+                                    8000 Brugge
+                                </div>
+                            </p>
+                            <p>
+
+                            </p>
+                            <p>
+                                <div>
+                                    050 55 29 35
+                                </div>
+                                <div>
+                                    info@fdk.be
+                                </div>
+                                <div>
+                                    BE 0420.530.929
+                                </div>
+                            </p>
+
+                        </td>
+                        <td style="vertical-align: top; padding-top: 14px;padding-left:15px">
+                            <img src="https://raw.githubusercontent.com/Gekko-Company/SDK-Email-Signature-Maker/master/assets/FDKgroep-logo.svg" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="font-size:5px;font-weight:900;padding-bottom:5px">
+                            <div style="float:left; width:25%;text-align:center;">
+                                PLEISTERWERK
+                            </div>
+
+                            <div style="float:left;width:25%; text-align:center;">
+                                SCHRIJNWERK
+                            </div>
+
+                            <div style="float:left;width:25%; text-align:center;">
+                                SCHILDERWERK
+                            </div>
+
+                            <div style="float:left;width:25%; text-align:center;">
+                                TOTAALAFWERKING
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div style="float:left; width:25%; background-color:#0C60B8; height:7px;">
+                                &nbsp;
+                            </div>
+
+                            <div style="float:left;width:25%; background-color:#CEA472; height:7px;">
+                                &nbsp;
+                            </div>
+
+                            <div style="float:left;width:25%; background-color:#FF4C49; height:7px;">
+                                &nbsp;
+                            </div>
+
+                            <div style="float:left;width:25%; background-color:#28BB84; height:7px;">
+                                &nbsp;
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="font-size:5px;font-weight:900;padding-top:15px">
+                            <div style="float:left; width:30px;">
+                                <a href="https://www.facebook.com/Fdkbvba/?ref=br_rs">
+                                    <img src="https://raw.githubusercontent.com/Gekko-Company/SDK-Email-Signature-Maker/master/assets/facebook.png" style="height:21px; width:21px" />
+                                </a>
+                            </div>
+                            <div style="float:left; width:30px;">
+                                <a href="https://www.instagram.com/fdk_bv/">
+                                    <img src="https://raw.githubusercontent.com/Gekko-Company/SDK-Email-Signature-Maker/master/assets/instagram.svg" style="height:21px; width:21px" />
+                                </a>
+                            </div>
+                            <div style="float:left; width:30px;">
+                                <a href="https://www.linkedin.com/company/18211499">
+                                    <img src="https://raw.githubusercontent.com/Gekko-Company/SDK-Email-Signature-Maker/master/assets/linkedIn.svg" style="height:21px; width:21px" />
+                                </a>
+                            </div>
+                            <div style="float:left; width:30px;">
+                                <a href="https://www.pinterest.com/FDK_BVBA/">
+                                    <img src="https://raw.githubusercontent.com/Gekko-Company/SDK-Email-Signature-Maker/master/assets/pinterest.png" style="height:21px; width:21px" />
+                                </a>
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+    <hr />
+    <div>
+        <textarea style="width: 600px;
+        height: 500px;padding:15px" id="code-holder">
+            food
+            </textarea>
+    </div>
+
+
+    <script>
+        const b = document.querySelector('#boom');
+        const n = document.querySelector('#name');
+        const f = document.querySelector('#position');
+        const nh = document.querySelector('#name-holder');
+        const fh = document.querySelector('#position-holder');
+        const code = document.querySelector('#outer-card');
+        const ch = document.querySelector('#code-holder');
+
+        const update = function () {
+            nh.textContent = n.value;
+            fh.textContent = f.value;
+            ch.value = code.innerHTML;
+        }
+        b.addEventListener('click', update);
+        update();
+    </script>
+</body>
+</html>
